@@ -1,11 +1,12 @@
+AWSTemplateFormatVersion: 2010-09-09
 Resources:
   Ec2Instance:
     Type: 'AWS::EC2::Instance'
     Properties:
       SecurityGroups:
         - !Ref InstanceSecurityGroup
-      KeyName: udacity
-      ImageId: 'ami-068663a3c619dd892'
+      KeyName: ci-cd-keypair
+      ImageId: 'ami-00874d747dde814fa'
   InstanceSecurityGroup:
     Type: 'AWS::EC2::SecurityGroup'
     Properties:
